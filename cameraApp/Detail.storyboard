@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="ZQv-eY-4wf">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="GJb-dC-YQY" customClass="DetailViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VGK-HZ-T9c"/>
+                        <viewControllerLayoutGuide type="bottom" id="W6Z-lR-c2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QeE-RC-dWt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aha-z7-mhD">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aha-z7-mhD" firstAttribute="top" secondItem="VGK-HZ-T9c" secondAttribute="bottom" id="gXq-yp-nKu"/>
+                            <constraint firstItem="W6Z-lR-c2h" firstAttribute="top" secondItem="aha-z7-mhD" secondAttribute="bottom" id="ghL-lU-dE8"/>
+                            <constraint firstItem="aha-z7-mhD" firstAttribute="leading" secondItem="QeE-RC-dWt" secondAttribute="leadingMargin" id="gkA-56-l2F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aha-z7-mhD" secondAttribute="trailing" id="tge-7b-vkO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAv-IE-P6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.200000000000003" y="-140.77961019490255"/>
+        </scene>
+    </scenes>
+</document>

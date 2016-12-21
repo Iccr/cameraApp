@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cameraApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cameraAppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cameraAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Quick.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>493480FF2A0748530C1D516FB33CC5D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83809A38136027B4284EC111C802F7B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A2D928D0AE9879590A9B4727AA438F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2A921A3A6B8F6842097F41B3A574743</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEA04E959D7DD9608AB004D37B7EE37A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
