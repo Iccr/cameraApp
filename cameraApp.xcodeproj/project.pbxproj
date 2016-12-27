@@ -19,6 +19,8 @@
 		90D513B81E0187BE008225AB /* MultiMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D513B71E0187BE008225AB /* MultiMediaManager.swift */; };
 		90D513BA1E018ACF008225AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D513B91E018ACF008225AB /* DetailViewController.swift */; };
 		90D513BC1E018B39008225AB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D513BB1E018B39008225AB /* Detail.storyboard */; };
+		90F48CEB1E0A4F7A0051EF6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F48CEA1E0A4F7A0051EF6F /* Extensions.swift */; };
+		90F48CEE1E0A4FC20051EF6F /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F48CED1E0A4FC20051EF6F /* Enum.swift */; };
 		DDDB366B91E9D85344562E12 /* Pods_cameraAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE59FFE23DB2CC1B1A36656 /* Pods_cameraAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		90D513B71E0187BE008225AB /* MultiMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiMediaManager.swift; sourceTree = "<group>"; };
 		90D513B91E018ACF008225AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90D513BB1E018B39008225AB /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		90F48CEA1E0A4F7A0051EF6F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		90F48CED1E0A4FC20051EF6F /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		9619E23B15082FAEFDD40F0C /* Pods-cameraAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cameraAppTests/Pods-cameraAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		994A6C82AA15FC8679A82D74 /* Pods_cameraAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E700F549542ED2DAA15CEB6 /* Pods-cameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				9034ABF21E01866A00EE8830 /* Info.plist */,
 				90D513B71E0187BE008225AB /* MultiMediaManager.swift */,
 				90D513BB1E018B39008225AB /* Detail.storyboard */,
+				90F48CEC1E0A4F810051EF6F /* Extensions */,
+				90F48CEF1E0A4FC70051EF6F /* Enum */,
 			);
 			path = cameraApp;
 			sourceTree = "<group>";
@@ -172,6 +178,22 @@
 				9034AC081E01866A00EE8830 /* Info.plist */,
 			);
 			path = cameraAppUITests;
+			sourceTree = "<group>";
+		};
+		90F48CEC1E0A4F810051EF6F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				90F48CEA1E0A4F7A0051EF6F /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		90F48CEF1E0A4FC70051EF6F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				90F48CED1E0A4FC20051EF6F /* Enum.swift */,
+			);
+			name = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F48CEB1E0A4F7A0051EF6F /* Extensions.swift in Sources */,
 				90D513B81E0187BE008225AB /* MultiMediaManager.swift in Sources */,
+				90F48CEE1E0A4FC20051EF6F /* Enum.swift in Sources */,
 				9034ABE91E01866A00EE8830 /* ViewController.swift in Sources */,
 				9034ABE71E01866A00EE8830 /* AppDelegate.swift in Sources */,
 				90D513BA1E018ACF008225AB /* DetailViewController.swift in Sources */,

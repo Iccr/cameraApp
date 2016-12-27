@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btn: UIButton!
     
-    
+    var text1 = "wow value"
+    var text2 = "longtitude" + "latitude"
+    var text3 = "wow value at the end"
     @IBAction func btnStart(_ sender: Any) {
         locationManager.requestLocation()
         btn.set(title: "requesting location...")
@@ -65,14 +67,11 @@ extension ViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
             let date = Date()
             let formatter = DateFormat.standard.dateFormatter.string(from: date)
             btn.set(title: "Start Boss!")
-//            lblNotify.set(text: "image processing")
-            
-            // post imageProcessing
-            var sb = UIStoryboard(name: StoryBoard.Detail.rawValue, bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+
             
             
             self.dismiss(animated: true, completion: {
@@ -81,8 +80,15 @@ extension ViewController: UIImagePickerControllerDelegate {
                     return
                 }
                 //
-                let texedImage = self.textToImage(drawText: "Wow", inImage: squareImage, atPoint: CGPoint(x: squareImage.size.width/2, y: squareImage.size.height/2))
-//                let texedImage = self.textToImage(drawText: "Wow", inImage: squareImage, atPoint: CGPoint(x: squareImage.size.width/2, y: squareImage.size.height/2))
+                let point = CGPoint(x: squareImage.size.width/2, y: squareImage.size.height/2)
+                // i need three points here.
+                
+                
+                let texedImage = self.textToImage(drawText: self.text1 as NSString, inImage: squareImage, atPoint: point )
+
+                // create get the detail view controller
+                let sb = UIStoryboard(name: StoryBoard.Detail.rawValue, bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: Identifiers.detailViewController) as! DetailViewController
                 vc.image = texedImage
                 // self.push(inNavigation: vc)
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -90,10 +96,19 @@ extension ViewController: UIImagePickerControllerDelegate {
         }
     }
     
+    
+    private func generatePoints(from image: UIImage) -> (point1: Double, point2: Double, point03: Double) {
+        let (height, width) = (image.size.height, image.size.width)
+        
+        
+        return (3.2, 4.5, 5.5)
+    }
+    
+    
     private func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
         
-        let textColor = UIColor.white
-        let textFont = UIFont(name: "Helvetica Bold", size: 12)!
+        
+        let textFont = UIFont(name: Konstants.font, size: Konstants.fontSize)!
         
         
         let scale = UIScreen.main.scale
@@ -101,7 +116,7 @@ extension ViewController: UIImagePickerControllerDelegate {
         
         let textFontAttributes = [
             NSFontAttributeName: textFont,
-            NSForegroundColorAttributeName: textColor,
+            NSForegroundColorAttributeName: Konstants.textColor,
             ] as [String : Any]
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
@@ -116,9 +131,11 @@ extension ViewController: UIImagePickerControllerDelegate {
     
     func getSqauredVersion(of  image: UIImage) -> UIImage? {
         // _sender is present if this was called from the messageViewController.
-        let size = image.size.width > image.size.height ? image.size.width : image.size.height
+        let height = image.size.height
+        let width = image.size.width
+        let size = width < height ? width : height
         
-            return resizeImage(image: image, targetSize: CGSize(width: 600, height: 600))
+            return resizeImage(image: image, targetSize: CGSize(width: size, height: size))
 
     }
     
@@ -146,36 +163,15 @@ extension ViewController: UINavigationControllerDelegate {
 
 }
 
-extension UIButton {
-    func set(title: String) {
-        self.setTitle(title, for: .normal)
-    }
+
+
+
+struct Konstants {
+    static let fontSize: CGFloat =  100
+    static let font: String = "Helvetica Bold"
+    static let textColor: UIColor = UIColor.white
 }
 
-extension UIViewController {
-    func push(inNavigation controller: UIViewController) {
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
+struct Identifiers {
+    static let detailViewController = "DetailViewController"
 }
-
-
-enum DateFormat: String {
-    case standard = "yyyy/MM/dd HH:mm"
-    
-    var dateFormatter: DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = NSTimeZone.default
-        dateFormatter.dateFormat = self.rawValue
-        return dateFormatter
-    }
-}
-
-enum StoryBoard: String {
-    case Detail = "Detail"
-}
-
-enum NotificationMessages: String {
-    case RequestLocation = "Requesting Location..."
-    case SqaredImageFailed = "Failed to convert image to required size"
-}
-
