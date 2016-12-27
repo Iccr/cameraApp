@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D466157916271E5948D243D /* Pods_cameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4D7FA4D1887223A9707CF2 /* Pods_cameraApp.framework */; };
 		8F373EAD689EB686C7AAFD16 /* Pods_cameraAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994A6C82AA15FC8679A82D74 /* Pods_cameraAppUITests.framework */; };
+		9033D2FA1E1259890058A6F8 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033D2F91E1259890058A6F8 /* Structs.swift */; };
 		9034ABE71E01866A00EE8830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034ABE61E01866A00EE8830 /* AppDelegate.swift */; };
 		9034ABE91E01866A00EE8830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034ABE81E01866A00EE8830 /* ViewController.swift */; };
 		9034ABEC1E01866A00EE8830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034ABEA1E01866A00EE8830 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		9034ABF11E01866A00EE8830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034ABEF1E01866A00EE8830 /* LaunchScreen.storyboard */; };
 		9034ABFC1E01866A00EE8830 /* cameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034ABFB1E01866A00EE8830 /* cameraAppTests.swift */; };
 		9034AC071E01866A00EE8830 /* cameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034AC061E01866A00EE8830 /* cameraAppUITests.swift */; };
-		90D513B81E0187BE008225AB /* MultiMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D513B71E0187BE008225AB /* MultiMediaManager.swift */; };
 		90D513BA1E018ACF008225AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D513B91E018ACF008225AB /* DetailViewController.swift */; };
 		90D513BC1E018B39008225AB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D513BB1E018B39008225AB /* Detail.storyboard */; };
 		90F48CEB1E0A4F7A0051EF6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F48CEA1E0A4F7A0051EF6F /* Extensions.swift */; };
@@ -45,6 +45,7 @@
 		3DE10F364D51A98BAB1CAAC6 /* Pods-cameraAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cameraAppTests/Pods-cameraAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE59FFE23DB2CC1B1A36656 /* Pods_cameraAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4D7FA4D1887223A9707CF2 /* Pods_cameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9033D2F91E1259890058A6F8 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		9034ABE31E01866A00EE8830 /* cameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034ABE61E01866A00EE8830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9034ABE81E01866A00EE8830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		9034AC021E01866A00EE8830 /* cameraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034AC061E01866A00EE8830 /* cameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraAppUITests.swift; sourceTree = "<group>"; };
 		9034AC081E01866A00EE8830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90D513B71E0187BE008225AB /* MultiMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiMediaManager.swift; sourceTree = "<group>"; };
 		90D513B91E018ACF008225AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90D513BB1E018B39008225AB /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		90F48CEA1E0A4F7A0051EF6F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -122,6 +122,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9033D2FB1E1259920058A6F8 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				9033D2F91E1259890058A6F8 /* Structs.swift */,
+			);
+			name = Structs;
+			sourceTree = "<group>";
+		};
 		9034ABDA1E01866A00EE8830 = {
 			isa = PBXGroup;
 			children = (
@@ -154,10 +162,10 @@
 				9034ABED1E01866A00EE8830 /* Assets.xcassets */,
 				9034ABEF1E01866A00EE8830 /* LaunchScreen.storyboard */,
 				9034ABF21E01866A00EE8830 /* Info.plist */,
-				90D513B71E0187BE008225AB /* MultiMediaManager.swift */,
 				90D513BB1E018B39008225AB /* Detail.storyboard */,
 				90F48CEC1E0A4F810051EF6F /* Extensions */,
 				90F48CEF1E0A4FC70051EF6F /* Enum */,
+				9033D2FB1E1259920058A6F8 /* Structs */,
 			);
 			path = cameraApp;
 			sourceTree = "<group>";
@@ -468,8 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9033D2FA1E1259890058A6F8 /* Structs.swift in Sources */,
 				90F48CEB1E0A4F7A0051EF6F /* Extensions.swift in Sources */,
-				90D513B81E0187BE008225AB /* MultiMediaManager.swift in Sources */,
 				90F48CEE1E0A4FC20051EF6F /* Enum.swift in Sources */,
 				9034ABE91E01866A00EE8830 /* ViewController.swift in Sources */,
 				9034ABE71E01866A00EE8830 /* AppDelegate.swift in Sources */,
@@ -628,7 +636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 774W8LPTVZ;
 				INFOPLIST_FILE = cameraApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccr.cameraApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -643,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 774W8LPTVZ;
 				INFOPLIST_FILE = cameraApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccr.cameraApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

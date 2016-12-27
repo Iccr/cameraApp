@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+import  UIKit
 
 enum DateFormat: String {
-    case standard = "yyyy/MM/dd HH:mm"
+    case standard = "d MMM yyyy, h:mm:ss a"
     
     var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
@@ -29,3 +29,9 @@ enum NotificationMessages: String {
     case SqaredImageFailed = "Failed to convert image to required size"
 }
 
+enum TextSize: CGFloat {
+    case date = 39
+    case location = 40
+    
+    case title = 50
+}
